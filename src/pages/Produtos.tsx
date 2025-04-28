@@ -11,6 +11,7 @@ const ListaProdutos = ({ produtos, onDelete }: { produtos: Produto[]; onDelete: 
         {produtos.map((produto) => (
           <li key={produto.id} style={{ display: "flex", justifyContent: "space-between", marginBottom: "10px" }}>
             <span>{produto.nome}</span>
+            <span>{produto.quantidade}</span>
             <button
               onClick={() => onDelete(produto.id)}
               style={{
